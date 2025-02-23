@@ -49,9 +49,7 @@ public class AccountService {
             return account;
         }
 
-        if(account.getBalance() < balance){
-            return account;
-        }
+        
 
         account.depositBalance(balance);
 
@@ -66,6 +64,10 @@ public class AccountService {
 
         
         if(account == null){
+            return account;
+        }
+
+        if(account.getBalance() < balance){
             return account;
         }
         
